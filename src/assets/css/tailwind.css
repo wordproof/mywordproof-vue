@@ -4,3 +4,45 @@
 /* purgecss end ignore */
 
 @tailwind utilities;
+
+@font-face {
+  font-family: "Söhne-Dreiviertelfett";
+  src: url("../../../public/fonts/Söhne-Dreiviertelfett.otf");
+}
+@font-face {
+  font-family: "Söhne-Buch";
+  src: url("../../../public/fonts/Söhne-Buch.otf");
+}
+
+body {
+  font-family: "Söhne-Buch", serif;
+  max-width: 1368px;
+  @apply text-lg m-auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Söhne-Dreiviertelfett", serif;
+}
+
+h1 {
+  @apply text-3xl;
+}
+
+h2 {
+  @apply text-2xl;
+}
+
+h3 {
+  @apply text-xl;
+}
+
+a {
+  @apply text-blue;
+}
+
+.site-container {
+  max-width: 1368px;
+  padding: 20px;
+}
