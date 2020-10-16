@@ -20,6 +20,7 @@ module.exports = {
       },
     },
     fontSize: {
+      'xs': '.75rem',
       'base': '1rem',
       'lg': '1.125rem',
       'xl': '1.5rem',
@@ -27,6 +28,7 @@ module.exports = {
       '3xl': '2.5rem',
     },
     spacing: {
+      '1': '4px',
       '2': '8px',
       '3': '12px',
       '4': '16px',

@@ -3,24 +3,33 @@
     <div class="mx-3 px-2 my-3 py-2 flex items-center justify-between">
       <div class="w-full">
         <div class="flex items-center">
+          <!-- logo -->
           <BaseLogo />
+
+          <!-- logo name -->
           <h3 class="ml-2 md:mr-4 lg:mr-8 xl:mr-10">
             <span class="text-blue">Word</span
             ><span class="text-teal">Proof</span>
           </h3>
+          <!-- end of logo name -->
+
+          <!-- links -->
           <div class="hidden md:block">
             <router-link
-              v-for="item in navItems"
-              :to="item.path"
-              v-bind:key="item.id"
+              v-for="link in navLinks"
+              :to="link.path"
+              v-bind:key="link.id"
               class="md:ml-1 md:px-2 lg:ml-3 lg:px-4 xl:ml-4 xl:px-6 py-4 rounded-full focus:outline-none hover:bg-gray-200 focus:bg-gray-200 transition duration-150 ease-in-out"
             >
-              {{ item.name }}
+              {{ link.name }}
             </router-link>
           </div>
+          <!-- end of links -->
 
+          <!-- notification -->
           <Notification class="ml-4 xl:mr-10 xl:ml-8" />
 
+          <!-- add website button-->
           <div class="flex items-center ml-auto">
             <!-- hide 'text' for md -->
             <button
@@ -29,6 +38,7 @@
             >
               +
             </button>
+            <!-- end of add website button-->
 
             <!-- show 'text' for lg and higher -->
             <button
@@ -37,7 +47,11 @@
             >
               + website
             </button>
+            <!-- end of add website button-->
 
+            <!-- accessibility mode icon -->
+            <BaseIcons name="accessibility" />
+            <BaseIcon name="angleRight" />
             <svg
               class="xl:ml-10"
               width="32px"
@@ -140,7 +154,7 @@ export default {
   },
   data() {
     return {
-      navItems: [
+      navLinks: [
         { id: 1, name: "Dashboard", path: "/dashboard" },
         { id: 2, name: "Content", path: "/content" },
         { id: 3, name: "Settings", path: "" },

@@ -46,3 +46,10 @@ a {
   max-width: 1368px;
   padding: 20px;
 }
+
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
