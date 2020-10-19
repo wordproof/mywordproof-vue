@@ -3,7 +3,7 @@
     <!-- hide 'notification icon' for md -->
     <button
       href="#"
-      class="lg:hidden flex items-center w-10 h-10 justify-center rounded-full bg-sand text-pink"
+      class="lg:hidden flex items-center w-10 h-10 justify-center rounded-full bg-sand text-pink focus:outline-none"
     >
       2
     </button>
@@ -12,7 +12,7 @@
 
     <button
       href="#"
-      class="hidden lg:flex items-center lg:px-4 xl:px-6 py-2 rounded-full bg-sand text-pink"
+      class="hidden lg:flex items-center lg:px-4 xl:px-6 py-2 rounded-full bg-sand text-pink focus:outline-none"
     >
       <img
         class="inline-block mr-2"

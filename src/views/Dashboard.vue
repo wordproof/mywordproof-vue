@@ -1,17 +1,48 @@
 <template>
   <div class="container mx-auto pb-10">
     <header>
-      <h1 class="text-blue">Hi Helle</h1>
+      <h1 class="text-blue">Hi Jelle</h1>
       <p class="text-blue">
         Good to see you!
       </p>
     </header>
     <main>
       <!-- NotificationBar -->
-      <NotificationBar class="my-8" />
+      <div class="lg:flex">
+        <NotificationBar
+          class="bg-sand text-pink mr-1"
+          icon="timestampIcon"
+          number="3"
+        >
+          Timestamps left
+        </NotificationBar>
+        <NotificationBar
+          class="bg-gray-200 text-blue"
+          icon="guardIcon"
+          number="4/10"
+        >
+          Guards active
+        </NotificationBar>
+      </div>
+      <div class="lg:flex">
+        <NotificationBar
+          class="bg-gray-200 text-blue mr-1"
+          icon="timestampIcon"
+          number="17"
+        >
+          Timestamps left
+        </NotificationBar>
+        <NotificationBar class="bg-sand text-pink" icon="guardIcon">
+          Guards inactive
+        </NotificationBar>
+      </div>
+      <a class="float-right text-base text-pink mt-2" href="">
+        Manage subscription &#8594;
+      </a>
+      <!-- End of NotificationBar -->
 
       <!-- 'Latest timestamps' block -->
-      <p class="inline-block text-blue text-base mt-6 mb-4 ">
+      <p class="inline-block text-blue text-base mt-10 mb-4 ">
         Latest timestamps
       </p>
       <div
@@ -60,7 +91,7 @@
 
       <!-- 'Latest infringements' block -->
       <p
-        class="inline-block text-gradient bg-gradient-to-r from-yellow to-pink text-base mt-8 mb-4"
+        class="inline-block text-gradient bg-gradient-to-r from-yellow to-pink text-base mt-10 mb-4"
       >
         Latest infringements
       </p>
@@ -103,7 +134,7 @@
         </div>
       </div>
 
-      <!-- infringement cards -->
+      <!-- Infringement cards -->
       <div class="flex">
         <div class="w-1/4 max-w-sm rounded overflow-hidden mt-10 mr-4">
           <img

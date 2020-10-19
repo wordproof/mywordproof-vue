@@ -4,7 +4,7 @@
       <div class="w-full">
         <div class="flex items-center">
           <!-- logo -->
-          <BaseLogo />
+          <a href="/"><BaseLogo /></a>
 
           <!-- logo name -->
           <h3 class="ml-2 md:mr-4 lg:mr-8 xl:mr-10">
@@ -34,7 +34,7 @@
             <!-- hide 'text' for md -->
             <button
               href="#"
-              class="lg:hidden w-10 h-10 flex justify-center items-center mr-4 rounded-full bg-gradient-to-r from-blue to-purple text-white"
+              class="lg:hidden w-10 h-10 flex justify-center items-center mr-4 rounded-full bg-gradient-to-r from-blue to-purple text-white focus:outline-none"
             >
               +
             </button>
@@ -43,15 +43,13 @@
             <!-- show 'text' for lg and higher -->
             <button
               href="#"
-              class="hidden lg:block lg:mr-6 lg:px-6 xl:mr-8 xl:px-6 py-3 rounded-full bg-gradient-to-r from-blue to-purple text-white"
+              class="hidden lg:block lg:mr-6 lg:px-6 xl:mr-8 xl:px-6 py-3 rounded-full bg-gradient-to-r from-blue to-purple text-white focus:outline-none"
             >
               + website
             </button>
             <!-- end of add website button-->
 
             <!-- accessibility mode icon -->
-            <BaseIcons name="accessibility" />
-            <BaseIcon name="angleRight" />
             <svg
               class="xl:ml-10"
               width="32px"
@@ -100,7 +98,7 @@
               </g>
             </svg>
 
-            <!-- Mobile menu button-->
+            <!-- mobile menu button-->
             <div class="ml-8 md:hidden">
               <button
                 class="inline-flex items-center justify-center p-2 rounded-md text-blue hover:text-white hover:bg-gray-600 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
