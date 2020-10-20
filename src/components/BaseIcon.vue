@@ -1,11 +1,5 @@
 <template>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    :viewBox="viewbox"
-    class="icon"
-    :width="width"
-    :height="height"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" :viewBox="viewbox" class="icon">
     <path v-for="(item, index) in paths" :key="index" :d="item.path" />
   </svg>
 </template>
@@ -48,15 +42,11 @@ const icons = {
           "m24.7 28.5c-0.2-0.4-0.8-0.6-1.2-0.3-0.4 0.3-0.6 0.8-0.3 1.3l1.2 2.2c0.2 0.4 0.8 0.6 1.2 0.3 0.4-0.3 0.6-0.8 0.3-1.3l-1.2-2.2z",
       },
     ],
-    width: "34",
-    height: "34",
   },
   timestampIcon: {
-    viewBox: "0 0 34 34",
+    viewBox: "0 0 16 24",
     path:
       "M15.0425208,2.67418051 L8.95574143,19.6741805 C8.67102154,20.4693856 7.91743669,21 7.07279676,21 L3.97666126,21 L3.97666126,21 L0,11.9975962 L3.41523501,11.9975962 L6.27034036,17.9468389 L12.8259319,0 L13.1595761,0 C14.2641456,2.41183085e-16 15.1595761,0.8954305 15.1595761,2 C15.1595761,2.22978256 15.1199782,2.45784659 15.0425208,2.67418051 Z",
-    width: "16",
-    height: "24",
   },
 };
 export default {
@@ -74,13 +64,7 @@ export default {
         : [{ path: icons[this.name].path }];
     },
     viewbox: function() {
-      return icons[this.name].viewbox;
-    },
-    width: function() {
-      return icons[this.name].width;
-    },
-    height: function() {
-      return icons[this.name].height;
+      return icons[this.name].viewBox;
     },
   },
 };
