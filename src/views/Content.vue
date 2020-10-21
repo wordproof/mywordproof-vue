@@ -4,7 +4,7 @@
       <!-- NotificationBar -->
       <div class="lg:flex">
         <NotificationBar
-          class="bg-sand text-pink mr-1"
+          class="bg-sand text-pink lg:mr-1"
           icon="timestampIcon"
           number="0"
         >

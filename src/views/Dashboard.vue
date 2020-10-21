@@ -10,7 +10,7 @@
       <!-- NotificationBar -->
       <div class="lg:flex">
         <NotificationBar
-          class="bg-gray-200 text-blue mr-1"
+          class="bg-gray-200 text-blue lg:mr-1"
           icon="timestampIcon"
           number="17"
           iconWidth="16"

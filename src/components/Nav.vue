@@ -16,9 +16,9 @@
           <!-- links -->
           <div class="hidden md:block">
             <router-link
-              v-for="link in navLinks"
+              v-for="(link, i) in navLinks"
               :to="link.path"
-              v-bind:key="link.id"
+              :key="i"
               class="md:ml-1 md:px-2 lg:ml-3 lg:px-4 xl:ml-4 xl:px-6 py-4 rounded-full focus:outline-none hover:bg-gray-200 focus:bg-gray-200 transition duration-150 ease-in-out"
             >
               {{ link.name }}
@@ -34,7 +34,7 @@
             <!-- hide 'text' for md -->
             <button
               href="#"
-              class="lg:hidden w-10 h-10 flex justify-center items-center mr-4 rounded-full bg-gradient-to-r from-blue to-purple text-white focus:outline-none"
+              class="lg:hidden w-10 h-10 flex justify-center items-center mr-4 ml-4 rounded-full bg-gradient-to-r from-blue to-purple text-white focus:outline-none"
             >
               +
             </button>
@@ -99,14 +99,14 @@
             </svg>
 
             <!-- mobile menu button-->
-            <div class="ml-8 md:hidden">
+            <div class="ml-4 md:hidden">
               <button
-                class="inline-flex items-center justify-center p-2 rounded-md text-blue hover:text-white hover:bg-gray-600 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
-                aria-label="Main menu"
-                aria-expanded="false"
+                class="inline-flex items-center justify-center p-2 rounded-md text-blue  focus:outline-none hover:bg-blue hover:text-white transition duration-150 ease-in-out"
+                @click.prevent="showTopMenu = !showTopMenu"
               >
                 <!-- Icon when menu is closed. -->
                 <svg
+                  v-if="!showTopMenu"
                   class="block h-6 w-6"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -120,9 +120,11 @@
                     d="M4 6h16M4 12h16M4 18h16"
                   />
                 </svg>
+
                 <!-- Icon when menu is open. -->
                 <svg
-                  class="hidden h-6 w-6"
+                  v-if="showTopMenu"
+                  class="block h-6 w-6"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -141,6 +143,23 @@
         </div>
       </div>
     </div>
+
+    <!-- Mobile menu -->
+    <transition name="fade" mode="out-in">
+      <div class="block sm:hidden" v-if="showTopMenu">
+        <div class="px-2 pt-2 pb-3">
+          <router-link
+            v-for="(link, i) in navLinks"
+            :to="link.path"
+            :key="i"
+            @click.native="showTopMenu = !showTopMenu"
+            class="block px-3 py-2 rounded-md text-base font-medium focus:outline-none hover:bg-gray-200 transition duration-150 ease-in-out"
+          >
+            {{ link.name }}
+          </router-link>
+        </div>
+      </div>
+    </transition>
   </nav>
 </template>
 
@@ -152,15 +171,21 @@ export default {
   },
   data() {
     return {
+      showTopMenu: false,
+      activeItem: null,
       navLinks: [
-        { id: 1, name: "Dashboard", path: "/dashboard" },
-        { id: 2, name: "Content", path: "/content" },
-        { id: 3, name: "Settings", path: "" },
-        { id: 4, name: "Support", path: "" },
+        { name: "Dashboard", path: "/dashboard" },
+        { name: "Content", path: "/content" },
+        { name: "Settings", path: "/settings" },
+        { name: "Support", path: "/support" },
       ],
     };
   },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+[aria-current] {
+  @apply outline-none bg-gray-200;
+}
+</style>

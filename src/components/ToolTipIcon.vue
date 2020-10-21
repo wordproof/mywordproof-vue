@@ -1,9 +1,11 @@
 <template>
-  <div class="tooltip">
+  <div class="tooltip relative">
     <div class="tooltip-icon ml-2">
       i
     </div>
-    <span class="tooltip-text">25 new timestamps available in 21 days</span>
+    <span class="tooltip-text absolute lg:static right-0 lg:right-auto"
+      >25 new timestamps available in 21 days</span
+    >
   </div>
 </template>
 
@@ -19,9 +21,13 @@ export default {};
   @apply bg-white rounded-full flex items-center justify-center;
 }
 
+.tooltip:hover {
+  cursor: pointer;
+}
+
 .tooltip .tooltip-text {
   max-width: 150px;
-  @apply invisible p-4 absolute z-50 inline-block ml-4 bg-white
+  @apply invisible p-4 absolute z-50 inline-block mr-4 bg-white
     text-black w-auto rounded-lg text-xs shadow;
 }
 

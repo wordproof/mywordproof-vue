@@ -53,3 +53,15 @@ a {
     -webkit-text-fill-color: transparent;
   }
 }
+
+/* purgecss start ignore */
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+/* purgecss end ignore */

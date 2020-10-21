@@ -17,16 +17,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-/* purgecss start ignore */
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.3s ease;
-}
-
-.fade-enter,
-.fade-leave-active {
-  opacity: 0;
-}
-/* purgecss end ignore */
-</style>
+<style lang="scss"></style>
