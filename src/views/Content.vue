@@ -178,15 +178,25 @@
         </div>
       </div>
     </main>
+    <ActionBar class="sticky-bar" />
   </div>
 </template>
 
 <script>
 import NotificationBar from "@/components/NotificationBar";
+import ActionBar from "@/components/ActionBar.vue";
 
 export default {
   components: {
     NotificationBar,
+    ActionBar,
   },
 };
 </script>
+<style lang="scss" scoped>
+.sticky-bar {
+  left: 50%;
+  transform: translateX(-50%);
+  @apply absolute bottom-0 mb-10;
+}
+</style>
