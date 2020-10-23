@@ -1,6 +1,6 @@
 <template>
   <div class="action-bar">
-    <div>
+    <div @click="actionModal">
       <BaseIcon class="text-blue" name="timestampIcon" width="16" height="24" />
       <a>Upload files</a>
     </div>
@@ -16,7 +16,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    actionModal() {
+      this.$modal.show("action");
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

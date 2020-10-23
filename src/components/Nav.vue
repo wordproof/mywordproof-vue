@@ -35,6 +35,7 @@
             <button
               href="#"
               class="lg:hidden w-10 h-10 flex justify-center items-center mr-4 ml-4 rounded-full bg-gradient-to-r from-blue to-purple text-white focus:outline-none"
+              @click="showAddWebsiteModal"
             >
               +
             </button>
@@ -44,6 +45,7 @@
             <button
               href="#"
               class="hidden lg:block lg:mr-6 lg:px-6 xl:mr-8 xl:px-6 py-3 rounded-full bg-gradient-to-r from-blue to-purple text-white focus:outline-none"
+              @click="showAddWebsiteModal"
             >
               + website
             </button>
@@ -160,6 +162,28 @@
         </div>
       </div>
     </transition>
+
+    <!-- Modal 'add website' -->
+    <modal name="addWebsite" :width="500" :height="500" :scrollable="true">
+      <div class="flex justify-between p-8">
+        <h1>Add website modal</h1>
+        <button
+          @click="closeAddWebsiteModal"
+          class="focus:outline-none transition duration-500 ease-in-out hover:origin-center transform hover:rotate-90"
+        >
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M17 1L1 17" stroke="#ACACAC" stroke-width="1.5" />
+            <path d="M0.999999 1L17 17" stroke="#ACACAC" stroke-width="1.5" />
+          </svg>
+        </button>
+      </div>
+    </modal>
   </nav>
 </template>
 
@@ -180,6 +204,14 @@ export default {
         { name: "Support", path: "/support" },
       ],
     };
+  },
+  methods: {
+    showAddWebsiteModal() {
+      this.$modal.show("addWebsite");
+    },
+    closeAddWebsiteModal() {
+      this.$modal.hide("addWebsite");
+    },
   },
 };
 </script>

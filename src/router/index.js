@@ -19,7 +19,34 @@ const routes = [
   {
     path: '/content',
     name: 'Content',
-    component: () => import(/* webpackChunkName: "Content" */ '../views/Content.vue')
+    component: () => import(/* webpackChunkName: "Content" */ '../views/Content.vue'),
+    redirect: '/content/sites',
+    children: [
+      {
+        path: "/content/sites",
+        name: "Sites",
+        component: () =>
+          import(
+            /* webpackChunkName: "Sites" */ "../views/content/Sites.vue"
+          ),
+      },
+      {
+        path: "/content/files",
+        name: "Files",
+        component: () =>
+          import(
+            /* webpackChunkName: "Files" */ "../views/content/Files.vue"
+          ),
+      },
+      {
+        path: "/content/infringements",
+        name: "Infringements",
+        component: () =>
+          import(
+            /* webpackChunkName: "Infringements" */ "../views/content/Infringements.vue"
+          ),
+      },
+    ]
   },
   {
     path: '/settings',

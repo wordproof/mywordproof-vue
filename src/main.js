@@ -4,6 +4,7 @@ import router from './router'
 import "./assets/css/tailwind.css";
 import upperFirst from "lodash/upperFirst";
 import camelCase from "lodash/camelCase";
+import VModal from 'vue-js-modal'
 
 const requireComponent = require.context(
   "./components/",
@@ -20,6 +21,8 @@ requireComponent.keys().forEach((fileName) => {
 
   Vue.component(componentName, componentConfig.default || componentConfig);
 });
+
+Vue.use(VModal)
 
 Vue.config.productionTip = false
 

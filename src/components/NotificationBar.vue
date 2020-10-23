@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between w-full lg:w-1/2 px-6 py-3 mt-8">
+  <div class="flex justify-between w-full h-20 lg:w-1/2 px-6">
     <div class="flex items-center">
       <BaseIcon
         class="mr-6"
@@ -21,6 +21,7 @@
       <button
         v-if="(number === '' || number === '0') && icon === 'guardIcon'"
         class="text-black rounded-full bg-gradient-to-r from-yellow to-pink focus:outline-none px-6 py-2"
+        @click="activateModal"
       >
         activate
       </button>
@@ -44,6 +45,11 @@ export default {
   },
   components: {
     ToolTipIcon,
+  },
+  methods: {
+    activateModal() {
+      this.$modal.show("activate");
+    },
   },
 };
 </script>

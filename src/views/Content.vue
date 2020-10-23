@@ -4,14 +4,14 @@
       <!-- NotificationBar -->
       <div class="lg:flex">
         <NotificationBar
-          class="bg-sand text-pink lg:mr-1"
+          class="bg-sand text-pink lg:mr-1 mt-2"
           icon="timestampIcon"
           number="0"
         >
           Timestamps left
         </NotificationBar>
         <NotificationBar
-          class="bg-gray-200 text-blue"
+          class="bg-gray-200 text-blue mt-2"
           icon="guardIcon"
           number="4/10"
         >
@@ -26,15 +26,11 @@
       <div
         class="flex items-center mt-10 mb-3 border-b border-solid border-blue"
       >
-        <a
-          class="font-bold mr-4 border-b-2 border-solid border-blue pb-3"
-          href=""
-          >Sites</a
-        >
-        <a class="mr-4 pb-3" href="">Files</a>
-        <a
+        <router-link to="/content/sites" class="mr-4 pb-3">Sites</router-link>
+        <router-link to="/content/files" class="mr-4 pb-3">Files</router-link>
+        <router-link
+          to="/content/infringements"
           class="flex items-center text-gradient bg-gradient-to-r from-yellow to-pink  pb-3"
-          href=""
           >Infringements
           <BaseIcon
             class="text-pink ml-1"
@@ -42,143 +38,55 @@
             width="20"
             height="16"
           />
-        </a>
+        </router-link>
       </div>
-
-      <h1 class="text-blue mt-4 mb-8">wordproof.com</h1>
-
-      <!-- 'Latest timestamps' block -->
-      <div
-        class="flex justify-between items-center border-t border-b border-solid border-light-blue pt-4 pb-3"
-      >
-        <div>
-          <p>WordProof Files</p>
-          <p class="text-xs text-gray-600">
-            nos.nl/artikel/2350289-waarom-we-wel-niet-een-mondkapje-moeten-dragen.html
-          </p>
-        </div>
-        <div>
-          <svg
-            class="ml-8 mr-4"
-            width="5px"
-            height="25px"
-            viewBox="0 0 5 25"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-          >
-            <title>Group 7</title>
-            <g
-              id="Platform-UX"
-              stroke="none"
-              stroke-width="1"
-              fill="none"
-              fill-rule="evenodd"
-              opacity="0.300000012"
-            >
-              <g
-                id="WIP-Wordproof---Dashboard-(Guards-active)"
-                transform="translate(-1132.000000, -421.000000)"
-                fill="#2000FF"
-              >
-                <g id="Group-7" transform="translate(1132.000000, 421.000000)">
-                  <circle id="Oval" cx="2.5" cy="2.5" r="2.5"></circle>
-                  <circle id="Oval" cx="2.5" cy="12.5" r="2.5"></circle>
-                  <circle id="Oval" cx="2.5" cy="22.5" r="2.5"></circle>
-                </g>
-              </g>
-            </g>
-          </svg>
-        </div>
-      </div>
-      <div
-        class="flex justify-between items-center border-b border-solid border-light-blue pt-4 pb-3"
-      >
-        <div>
-          <p>WordProof Files</p>
-          <p class="text-xs text-gray-600">
-            nos.nl/artikel/2350289-waarom-we-wel-niet-een-mondkapje-moeten-dragen.html
-          </p>
-        </div>
-        <div>
-          <svg
-            class="ml-8 mr-4"
-            width="5px"
-            height="25px"
-            viewBox="0 0 5 25"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-          >
-            <title>Group 7</title>
-            <g
-              id="Platform-UX"
-              stroke="none"
-              stroke-width="1"
-              fill="none"
-              fill-rule="evenodd"
-              opacity="0.300000012"
-            >
-              <g
-                id="WIP-Wordproof---Dashboard-(Guards-active)"
-                transform="translate(-1132.000000, -421.000000)"
-                fill="#2000FF"
-              >
-                <g id="Group-7" transform="translate(1132.000000, 421.000000)">
-                  <circle id="Oval" cx="2.5" cy="2.5" r="2.5"></circle>
-                  <circle id="Oval" cx="2.5" cy="12.5" r="2.5"></circle>
-                  <circle id="Oval" cx="2.5" cy="22.5" r="2.5"></circle>
-                </g>
-              </g>
-            </g>
-          </svg>
-        </div>
-      </div>
-      <div
-        class="flex justify-between items-center border-b border-solid border-light-blue pt-4 pb-3"
-      >
-        <div>
-          <p>WordProof Files</p>
-          <p class="text-xs text-gray-600">
-            nos.nl/artikel/2350289-waarom-we-wel-niet-een-mondkapje-moeten-dragen.html
-          </p>
-        </div>
-        <div>
-          <svg
-            class="ml-8 mr-4"
-            width="5px"
-            height="25px"
-            viewBox="0 0 5 25"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-          >
-            <title>Group 7</title>
-            <g
-              id="Platform-UX"
-              stroke="none"
-              stroke-width="1"
-              fill="none"
-              fill-rule="evenodd"
-              opacity="0.300000012"
-            >
-              <g
-                id="WIP-Wordproof---Dashboard-(Guards-active)"
-                transform="translate(-1132.000000, -421.000000)"
-                fill="#2000FF"
-              >
-                <g id="Group-7" transform="translate(1132.000000, 421.000000)">
-                  <circle id="Oval" cx="2.5" cy="2.5" r="2.5"></circle>
-                  <circle id="Oval" cx="2.5" cy="12.5" r="2.5"></circle>
-                  <circle id="Oval" cx="2.5" cy="22.5" r="2.5"></circle>
-                </g>
-              </g>
-            </g>
-          </svg>
-        </div>
-      </div>
+      <router-view />
     </main>
     <ActionBar class="sticky-bar" />
+
+    <!-- Modal 'activate' -->
+    <modal name="activate" :width="500" :height="500" :scrollable="true">
+      <div class="flex justify-between p-8">
+        <h1 class="text-black">Your subscription</h1>
+        <button
+          @click="closeActivateModal"
+          class="focus:outline-none transition duration-500 ease-in-out hover:origin-center transform hover:rotate-90"
+        >
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M17 1L1 17" stroke="#ACACAC" stroke-width="1.5" />
+            <path d="M0.999999 1L17 17" stroke="#ACACAC" stroke-width="1.5" />
+          </svg>
+        </button>
+      </div>
+    </modal>
+
+    <!-- Modal 'action' -->
+    <modal name="action" :width="500" :height="500" :scrollable="true">
+      <div class="flex justify-between p-8">
+        <h1 class="text-black">Action Bar Modal</h1>
+        <button
+          @click="closeActionModal"
+          class="focus:outline-none transition duration-500 ease-in-out hover:origin-center transform hover:rotate-90"
+        >
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M17 1L1 17" stroke="#ACACAC" stroke-width="1.5" />
+            <path d="M0.999999 1L17 17" stroke="#ACACAC" stroke-width="1.5" />
+          </svg>
+        </button>
+      </div>
+    </modal>
   </div>
 </template>
 
@@ -191,6 +99,14 @@ export default {
     NotificationBar,
     ActionBar,
   },
+  methods: {
+    closeActionModal() {
+      this.$modal.hide("action");
+    },
+    closeActivateModal() {
+      this.$modal.hide("activate");
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -198,5 +114,9 @@ export default {
   left: 50%;
   transform: translateX(-50%);
   @apply absolute bottom-0 mb-10;
+}
+
+[aria-current] {
+  @apply font-bold border-b-2 border-solid border-blue;
 }
 </style>

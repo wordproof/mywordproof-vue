@@ -35,12 +35,16 @@ module.exports = {
       '6': '24px',
       '8': '32px',
       '10': '40px',
+      '20': '80px',
     },
     extend: {
       colors: {
-          'light-blue': '#E2E9F4',
-          'sand': '#FFEBCA',
-        }
+        'light-blue': '#E2E9F4',
+        'sand': '#FFEBCA',
+      },
+      opacity: {
+        '30': '.3',
+      }
     }
   },
   variants: {},
