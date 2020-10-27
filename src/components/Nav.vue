@@ -234,8 +234,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-[aria-current] {
-  @apply outline-none bg-gray-200;
-}
-</style>
+<style lang="scss" scoped></style>

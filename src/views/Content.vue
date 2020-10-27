@@ -24,7 +24,7 @@
       <!-- End of NotificationBar -->
 
       <div
-        class="flex items-center mt-10 mb-3 border-b border-solid border-blue"
+        class="tabs flex items-center mt-10 mb-3 border-b border-solid border-blue"
       >
         <router-link to="/content/sites" class="mr-4 pb-3">Sites</router-link>
         <router-link to="/content/files" class="mr-4 pb-3">Files</router-link>

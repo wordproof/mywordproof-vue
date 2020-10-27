@@ -48,7 +48,11 @@ a {
 }
 
 /* purgecss start ignore */
-[aria-current] {
+nav [aria-current] {
+  @apply outline-none bg-gray-200;
+}
+
+.tabs [aria-current] {
   @apply font-bold border-b-2 border-solid border-blue;
 }
 /* purgecss end ignore */
