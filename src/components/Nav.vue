@@ -8,8 +8,10 @@
 
           <!-- logo name -->
           <h3 class="ml-2 md:mr-4 lg:mr-8 xl:mr-10">
-            <span class="text-blue">Word</span
-            ><span class="text-teal">Proof</span>
+            <a href="/">
+              <span>Word</span>
+              <span class="text-teal">Proof</span>
+            </a>
           </h3>
           <!-- end of logo name -->
 
@@ -29,8 +31,9 @@
           <!-- notification -->
           <Notification class="ml-4 xl:mr-10 xl:ml-8" />
 
-          <!-- add website button-->
           <div class="flex items-center ml-auto">
+            <!-- add website button-->
+
             <!-- hide 'text' for md -->
             <button
               href="#"
@@ -60,6 +63,7 @@
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
+              @click="highContrastMode"
             >
               <title>Accessibility Mode icon</title>
               <defs>
@@ -211,6 +215,20 @@ export default {
     },
     closeAddWebsiteModal() {
       this.$modal.hide("addWebsite");
+    },
+    highContrastMode() {
+      const linkTags = document.querySelectorAll("head > link");
+      var linkArray = Array.from(linkTags);
+      const checkHighContrastCss = linkArray.filter((el) => {
+        return el.href.includes("high-contrast.css");
+      });
+      if (checkHighContrastCss != "") {
+        const highContrastLink = checkHighContrastCss[0];
+        highContrastLink.parentNode.removeChild(highContrastLink);
+      } else {
+        document.head.innerHTML +=
+          '<link rel="stylesheet" type="text/css" href="./css/high-contrast.css" />';
+      }
     },
   },
 };

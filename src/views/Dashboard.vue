@@ -10,7 +10,7 @@
       <!-- NotificationBar -->
       <div class="lg:flex mt-6">
         <NotificationBar
-          class="bg-gray-200 text-blue lg:mr-1 mt-2"
+          class="bg-gray-200 text-blue border border-solid border-gray-200 lg:mr-1 mt-2"
           icon="timestampIcon"
           number="17"
           iconWidth="16"
@@ -19,7 +19,7 @@
           Timestamps left
         </NotificationBar>
         <NotificationBar
-          class="bg-sand text-pink mt-2"
+          class="bg-sand text-pink border border-solid border-sand mt-2"
           icon="guardIcon"
           number="0"
           iconWidth="34"

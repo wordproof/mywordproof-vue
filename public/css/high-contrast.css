@@ -1,0 +1,31 @@
+body,
+h1,
+h2,
+h3,
+p,
+a,
+button,
+svg,
+div,
+span {
+  color: #2000ff !important;
+  background-color: white !important;
+  opacity: 1 !important;
+  border-color: #2000ff !important;
+}
+
+svg path {
+  fill: #2000ff !important;
+}
+
+img {
+  visibility: hidden;
+}
+
+button,
+p,
+a {
+  background-image: none !important;
+  --gradient-to-color: none !important;
+  -webkit-text-fill-color: #2000ff !important;
+}

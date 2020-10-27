@@ -4,14 +4,14 @@
       <!-- NotificationBar -->
       <div class="lg:flex">
         <NotificationBar
-          class="bg-sand text-pink lg:mr-1 mt-2"
+          class="bg-sand text-pink border border-solid border-sand  lg:mr-1 mt-2"
           icon="timestampIcon"
           number="0"
         >
           Timestamps left
         </NotificationBar>
         <NotificationBar
-          class="bg-gray-200 text-blue mt-2"
+          class="bg-gray-200 text-blue border border-solid border-gray-200 mt-2"
           icon="guardIcon"
           number="4/10"
         >
@@ -113,7 +113,7 @@ export default {
 .sticky-bar {
   left: 50%;
   transform: translateX(-50%);
-  @apply absolute bottom-0 mb-10;
+  @apply fixed bottom-0 mb-10;
 }
 
 [aria-current] {
