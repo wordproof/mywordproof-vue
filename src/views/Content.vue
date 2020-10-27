@@ -115,8 +115,9 @@ export default {
   transform: translateX(-50%);
   @apply fixed bottom-0 mb-10;
 }
-
+/* purgecss start ignore */
 [aria-current] {
   @apply font-bold border-b-2 border-solid border-blue;
 }
+/* purgecss end ignore */
 </style>
