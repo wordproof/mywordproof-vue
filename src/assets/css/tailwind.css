@@ -47,6 +47,12 @@ a {
   padding: 20px;
 }
 
+/* purgecss start ignore */
+[aria-current] {
+  @apply font-bold border-b-2 border-solid border-blue;
+}
+/* purgecss end ignore */
+
 @layer utilities {
   .text-gradient {
     background-clip: text;
