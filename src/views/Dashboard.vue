@@ -37,24 +37,32 @@
       <p class="inline-block text-blue text-base mt-20 sm:mt10 mb-4 ">
         Latest timestamps
       </p>
-      <div
-        class="flex justify-between items-center border-t border-b border-solid border-light-blue pt-4 pb-3"
-      >
-        <div>
-          <p>WordProof Files</p>
-          <p class="text-xs text-gray-600">
-            nos.nl/artikel/2350289-waarom-we-wel-niet-een-mondkapje-moeten-dragen.html
-          </p>
-        </div>
-        <div>
-          <BaseIcon
-            class="ml-8 mr-4 text-blue opacity-30"
-            name="dotsIcon"
-            width="5px"
-            height="25px"
-          />
-        </div>
-      </div>
+      <ListItem class="border-t">
+        <p slot="header">WordProof Files</p>
+        <p slot="link" class="text-xs text-gray-600">
+          nos.nl/artikel/2350289-waarom-we-wel-niet-een-mondkapje-moeten-dragen.html
+        </p>
+        <BaseIcon
+          slot="icon"
+          class="ml-8 mr-4 text-blue opacity-30"
+          name="dotsIcon"
+          width="5px"
+          height="25px"
+        />
+      </ListItem>
+      <ListItem class="border-t border-b">
+        <p slot="header">WordProof Lightspeed App</p>
+        <p slot="link" class="text-xs text-gray-600">
+          nos.nl/artikel/2350289-waarom-we-wel-niet-een-mondkapje-moeten-dragen.html
+        </p>
+        <BaseIcon
+          slot="icon"
+          class="ml-8 mr-4 text-blue opacity-30"
+          name="dotsIcon"
+          width="5px"
+          height="25px"
+        />
+      </ListItem>
 
       <!-- 'Latest infringements' block -->
       <p
@@ -62,16 +70,12 @@
       >
         Latest infringements
       </p>
-      <div
-        class="flex justify-between items-center border-t border-b border-solid border-light-blue pt-4 pb-3"
-      >
-        <div>
-          <p>WordProof Files</p>
-          <p class="text-xs text-gray-600">
-            nos.nl/artikel/2350289-waarom-we-wel-niet-een-mondkapje-moeten-dragen.html
-          </p>
-        </div>
-        <div>
+      <ListItem class="border-t">
+        <p slot="header">WordProof Files</p>
+        <p slot="link" class="text-xs text-gray-600">
+          nos.nl/artikel/2350289-waarom-we-wel-niet-een-mondkapje-moeten-dragen.html
+        </p>
+        <div slot="icon">
           <div class="bg-sand rounded-full px-4 py-1">
             <p
               class="whitespace-no-wrap text-base text-gradient bg-gradient-to-r from-yellow to-pink "
@@ -80,17 +84,13 @@
             </p>
           </div>
         </div>
-      </div>
-      <div
-        class="flex justify-between items-center border-b border-solid border-light-blue pt-4 pb-3"
-      >
-        <div>
-          <p>WordProof Lightspeed App</p>
-          <p class="text-xs text-gray-600">
-            nos.nl/artikel/2350289-waarom-we-wel-niet-een-mondkapje-moeten-dragen.html
-          </p>
-        </div>
-        <div>
+      </ListItem>
+      <ListItem class="border-t">
+        <p slot="header">WordProof Lightspeed App</p>
+        <p slot="link" class="text-xs text-gray-600">
+          nos.nl/artikel/2350289-waarom-we-wel-niet-een-mondkapje-moeten-dragen.html
+        </p>
+        <div slot="icon">
           <div class="bg-sand rounded-full px-4 py-1">
             <p
               class="whitespace-no-wrap text-base text-gradient bg-gradient-to-r from-yellow to-pink "
@@ -99,7 +99,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </ListItem>
 
       <!-- Infringement cards -->
       <div class="flex">
@@ -144,7 +144,7 @@
         :adaptive="true"
       >
         <div class="flex justify-between p-8">
-          <h1 class="text-black">Your subscription</h1>
+          <h1 class="text-blue">Your subscription</h1>
           <button
             @click="closeActivateModal"
             class="focus:outline-none transition duration-500 ease-in-out hover:origin-center transform hover:rotate-90"
@@ -167,10 +167,12 @@
 
 <script>
 import NotificationBar from "@/components/NotificationBar";
+import ListItem from "@/components/ListItem.vue";
 
 export default {
   components: {
     NotificationBar,
+    ListItem,
   },
   methods: {
     closeActivateModal() {

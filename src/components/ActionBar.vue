@@ -30,6 +30,7 @@ export default {
   @apply flex px-2 py-4 rounded-md;
   width: 400px;
   background-color: RGBA(226, 233, 244, 0.75);
+  z-index: 100;
   > div {
     @apply flex flex-col w-1/3 items-center text-base cursor-pointer;
   }

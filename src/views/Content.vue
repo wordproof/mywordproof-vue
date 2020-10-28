@@ -30,7 +30,7 @@
         <router-link to="/content/files" class="mr-4 pb-3">Files</router-link>
         <router-link
           to="/content/infringements"
-          class="flex items-center text-gradient bg-gradient-to-r from-yellow to-pink  pb-3"
+          class="flex items-center text-pink pb-3"
           >Infringements
           <BaseIcon
             class="text-pink ml-1"
