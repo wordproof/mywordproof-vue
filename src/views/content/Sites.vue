@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mb-20">
     <h1 class="text-blue mt-4 mb-8">wordproof.com</h1>
 
     <!-- 'Latest timestamps' block -->

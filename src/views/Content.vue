@@ -24,7 +24,7 @@
       <!-- End of NotificationBar -->
 
       <div
-        class="tabs flex items-center mt-10 mb-3 border-b border-solid border-blue"
+        class="tabs flex items-center mt-20 sm:mt-10 mb-3 border-b border-solid border-blue"
       >
         <router-link to="/content/sites" class="mr-4 pb-3">Sites</router-link>
         <router-link to="/content/files" class="mr-4 pb-3">Files</router-link>
@@ -42,10 +42,16 @@
       </div>
       <router-view />
     </main>
-    <ActionBar class="sticky-bar" />
+    <ActionBar class="sticky-bar sm:mb-10" />
 
     <!-- Modal 'activate' -->
-    <modal name="activate" :width="500" :height="500" :scrollable="true">
+    <modal
+      name="activate"
+      :width="500"
+      :height="500"
+      :scrollable="true"
+      :adaptive="true"
+    >
       <div class="flex justify-between p-8">
         <h1 class="text-black">Your subscription</h1>
         <button
@@ -67,7 +73,13 @@
     </modal>
 
     <!-- Modal 'action' -->
-    <modal name="action" :width="500" :height="500" :scrollable="true">
+    <modal
+      name="action"
+      :width="500"
+      :height="500"
+      :scrollable="true"
+      :adaptive="true"
+    >
       <div class="flex justify-between p-8">
         <h1 class="text-black">Action Bar Modal</h1>
         <button
@@ -113,6 +125,6 @@ export default {
 .sticky-bar {
   left: 50%;
   transform: translateX(-50%);
-  @apply fixed bottom-0 mb-10;
+  @apply fixed bottom-0;
 }
 </style>

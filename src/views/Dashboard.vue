@@ -34,7 +34,7 @@
       <!-- End of NotificationBar -->
 
       <!-- 'Latest timestamps' block -->
-      <p class="inline-block text-blue text-base mt-10 mb-4 ">
+      <p class="inline-block text-blue text-base mt-20 sm:mt10 mb-4 ">
         Latest timestamps
       </p>
       <div
@@ -136,7 +136,13 @@
       </div>
 
       <!-- Modal 'activate' -->
-      <modal name="activate" :width="500" :height="500" :scrollable="true">
+      <modal
+        name="activate"
+        :width="500"
+        :height="500"
+        :scrollable="true"
+        :adaptive="true"
+      >
         <div class="flex justify-between p-8">
           <h1 class="text-black">Your subscription</h1>
           <button

@@ -7,7 +7,7 @@
           <a href="/"><BaseLogo /></a>
 
           <!-- logo name -->
-          <h3 class="ml-2 md:mr-4 lg:mr-8 xl:mr-10">
+          <h3 class="hidden sm:block ml-2 md:mr-4 lg:mr-8 xl:mr-10">
             <a href="/">
               <span>Word</span>
               <span class="text-teal">Proof</span>
@@ -168,7 +168,13 @@
     </transition>
 
     <!-- Modal 'add website' -->
-    <modal name="addWebsite" :width="500" :height="500" :scrollable="true">
+    <modal
+      name="addWebsite"
+      :width="500"
+      :height="500"
+      :scrollable="true"
+      :adaptive="true"
+    >
       <div class="flex justify-between p-8">
         <h1>Add website modal</h1>
         <button
