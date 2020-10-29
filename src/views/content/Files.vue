@@ -337,7 +337,7 @@ export default {
 }
 .card {
   max-height: 414px;
-  @apply absolute max-w-sm rounded p-2;
+  @apply absolute rounded p-2;
   &:hover {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
     z-index: 100;
