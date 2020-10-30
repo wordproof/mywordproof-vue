@@ -8,8 +8,7 @@ const routes = [
   {
     path: '/',
     name: 'Index',
-    component: Index,
-    redirect: '/dashboard'
+    component: Index
   },
   {
     path: '/dashboard',

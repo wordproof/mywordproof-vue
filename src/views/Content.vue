@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto pb-10">
+  <div class="container mx-auto pb-10 mt-6">
     <main>
       <!-- NotificationBar -->
       <div class="lg:flex">
