@@ -1,70 +1,78 @@
 <template>
-  <form class="mt-1" action="#/welcome" method="">
-    <div class="flex flex-col justify-between px-8 sm:px-20 pt-8">
-      <h2 class="text-blue text-lg sm:text-2xl">Create an account</h2>
-      <div class="form-group mt-4">
-        <label for="name" class="label">
-          <input
-            id="name"
-            class="form-control focus:outline-none"
-            placeholder="Name"
-            required
-            type="text"
-            v-model="loginData.name"
-          />
-          <span>Name</span>
-        </label>
+  <modal
+    name="createAccount"
+    :width="460"
+    :height="475"
+    :scrollable="true"
+    :adaptive="true"
+    :clickToClose="false"
+  >
+    <form class="mt-1" action="#/welcome" method="">
+      <div class="flex flex-col justify-between px-8 sm:px-20 pt-8">
+        <h2 class="text-blue text-lg sm:text-2xl">Create an account</h2>
+        <div class="form-group mt-4">
+          <label for="name" class="label">
+            <input
+              id="name"
+              class="form-control focus:outline-none"
+              placeholder="Name"
+              required
+              type="text"
+              v-model="loginData.name"
+            />
+            <span>Name</span>
+          </label>
+        </div>
+        <div class="form-group mt-4 sm:mt-6">
+          <label for="email" class="label">
+            <input
+              id="email"
+              class="form-control focus:outline-none"
+              placeholder="E-mail address"
+              required
+              type="email"
+              v-model="loginData.email"
+            />
+            <span>E-mail address</span>
+          </label>
+        </div>
+        <div class="form-group mt-4 sm:mt-6">
+          <label for="password" class="label">
+            <input
+              id="password"
+              class="form-control focus:outline-none"
+              placeholder="Password"
+              required
+              type="password"
+              v-model="loginData.password"
+            />
+            <span>Password</span>
+          </label>
+        </div>
       </div>
-      <div class="form-group mt-4 sm:mt-6">
-        <label for="email" class="label">
-          <input
-            id="email"
-            class="form-control focus:outline-none"
-            placeholder="E-mail address"
-            required
-            type="email"
-            v-model="loginData.email"
-          />
-          <span>E-mail address</span>
-        </label>
+      <a
+        class="text-gray-600 text-xs px-8 sm:px-20 pt-2 float-right underline"
+        href=""
+      >
+        I already have an account
+      </a>
+      <div class="flex px-8 sm:px-20 mt-10">
+        <input class="check-box mt-1" type="checkbox" v-model="checked" />
+        <p class="font-size-14 ml-4 lg:ml-6">
+          I agree to the
+          <a href="" class="text-black underline">Terms and Conditions</a> and
+          <a href="" class="text-black underline">Privacy Policy</a> .
+        </p>
       </div>
-      <div class="form-group mt-4 sm:mt-6">
-        <label for="password" class="label">
-          <input
-            id="password"
-            class="form-control focus:outline-none"
-            placeholder="Password"
-            required
-            type="password"
-            v-model="loginData.password"
-          />
-          <span>Password</span>
-        </label>
-      </div>
-    </div>
-    <a
-      class="text-gray-600 text-xs px-8 sm:px-20 pt-2 float-right underline"
-      href=""
-    >
-      I already have an account
-    </a>
-    <div class="flex px-8 sm:px-20 mt-10">
-      <input class="check-box mt-1" type="checkbox" v-model="checked" />
-      <p class="font-size-14 ml-4 lg:ml-6">
-        I agree to the
-        <a href="" class="text-black underline">Terms and Conditions</a> and
-        <a href="" class="text-black underline">Privacy Policy</a> .
-      </p>
-    </div>
-    <button
-      type="submit"
-      class="bg-blue text-white w-full absolute h-20 bottom-0"
-      :disabled="isDisabled"
-      @click="welcome"
-    >
-      Create account
-    </button>
-  </form>
+      <button
+        type="submit"
+        class="bg-blue text-white w-full absolute h-20 bottom-0"
+        :disabled="isDisabled"
+      >
+        Create account
+      </button>
+    </form>
+  </modal>
 </template>
 
 <script>
@@ -95,6 +103,9 @@ export default {
     welcome() {
       router.push("./welcome");
     },
+  },
+  mounted() {
+    this.$modal.show("createAccount");
   },
 };
 </script>
@@ -161,12 +172,6 @@ export default {
   border-style: solid;
   border-width: 1px;
   border-color: #783cdc;
-  // border-image-source: linear-gradient(261deg, #783cdc 100%, #2000ff);
-  // border-image-slice: 1;
-  // background-image: linear-gradient(to bottom, #ffffff, #ffffff),
-  //   linear-gradient(261deg, #783cdc 100%, #2000ff);
-  // background-origin: border-box;
-  // background-clip: content-box, border-box;
 }
 .font-size-14 {
   font-size: 14px;

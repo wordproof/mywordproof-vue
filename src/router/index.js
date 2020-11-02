@@ -27,6 +27,30 @@ const routes = [
             /* webpackChunkName: "Welcome" */ "../views/registration/Welcome.vue"
           ),
       },
+      {
+        path: "/plan",
+        name: "Plan",
+        component: () =>
+          import(
+            /* webpackChunkName: "Plan" */ "../views/registration/Plan.vue"
+          ),
+      },
+      {
+        path: "/billing",
+        name: "Billing",
+        component: () =>
+          import(
+            /* webpackChunkName: "Billing" */ "../views/registration/Billing.vue"
+          ),
+      },
+      {
+        path: "/succeed",
+        name: "Succeed",
+        component: () =>
+          import(
+            /* webpackChunkName: "Succeed" */ "../views/registration/Succeed.vue"
+          ),
+      },
     ]
   },
   {
