@@ -2,12 +2,12 @@
   <modal
     name="plan"
     :width="1029"
-    :height="805"
-    :scrollable="true"
+    :minHeight="805"
+    scrollable="true"
     :adaptive="true"
     :clickToClose="false"
   >
-    <div class="px-2 py-4 sm:px-10 sm:py-10">
+    <div class="px-2 py-4 sm:px-10 sm:py-10 overflow-scroll h-full">
       <div class="sm:flex justify-between">
         <div class="flex flex-col justify-center">
           <h1 class="text-blue text-xl sm:text-3xl">Let’s make a plan!</h1>
@@ -32,7 +32,7 @@
       </div>
       <div class="sm:flex items-center mt-8">
         <div class="card sm:w-1/3 box-shadow relative">
-          <div class="flex justify-between mt-6 mx-4">
+          <div class="flex justify-between mt-6 mx-4 pt-10 sm:pt-1">
             <h3 class="text-blue">Hobby</h3>
             <div class="flex">
               <div class="flex">
@@ -78,8 +78,8 @@
             </button>
           </div>
         </div>
-        <div class="card active sm:w-1/3 box-shadow relative mx-4 bg-blue">
-          <div class="flex justify-between mt-6 mx-4">
+        <div class="card active sm:w-1/3 box-shadow relative sm:mx-4 bg-blue">
+          <div class="flex justify-between mt-6 mx-4 sm:mx-4 pt-10 sm:pt-1">
             <div class="flex flex-col">
               <p class="text-white">recommended</p>
               <h3 class="text-white">Professional</h3>
@@ -136,7 +136,7 @@
           </div>
         </div>
         <div class="card sm:w-1/3 box-shadow relative">
-          <div class="flex justify-between mt-6 mx-4">
+          <div class="flex justify-between mt-6 mx-4 pt-10 sm:pt-1">
             <h3 class="text-blue">Business</h3>
             <div class="flex">
               <div class="flex">
@@ -182,10 +182,10 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="flex justify-between px-2 sm:px-10">
-      <a href="" class="text-black">&#8592; Free account</a>
-      <a href="" class="text-blue underline">View publisher plans</a>
+      <div class="flex justify-between px-2 sm:px-10">
+        <a href="" class="text-black">&#8592; Free account</a>
+        <a href="" class="text-blue underline">View publisher plans</a>
+      </div>
     </div>
   </modal>
 </template>

@@ -8,8 +8,8 @@
     :clickToClose="false"
   >
     <form action="#/succeed" method="">
-      <div class="flex flex-col h-full px-10 sm:px-20 py-4">
-        <h1 class="text-blue mt-8">Billing details</h1>
+      <div class="flex flex-col h-full px-4 sm:px-20 sm:py-4">
+        <h1 class="text-blue sm:mt-8">Billing details</h1>
         <p class="text-blue text-xs">
           Sorry to bother! But before we can activate your plan, we need your
           billing details.

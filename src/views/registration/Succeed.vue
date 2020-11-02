@@ -2,12 +2,12 @@
   <modal
     name="succeed"
     :width="460"
-    :height="308"
+    :minHeight="308"
     :scrollable="true"
     :adaptive="true"
     :clickToClose="false"
   >
-    <div class="flex flex-col items-center bg-blue h-full px-10">
+    <div class="flex flex-col items-center bg-blue h-full sm:px-10">
       <svg
         class="mt-8"
         width="44px"
