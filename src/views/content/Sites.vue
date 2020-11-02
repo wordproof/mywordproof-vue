@@ -30,7 +30,7 @@
         </a>
       </div>
       <div class="flex items-center">
-        <img src="../../../public/img/wordpress-icon.png" alt="" />
+        <img src="../../../public/img/wordpress-icon.png" alt="Wordpress logo" />
         <BaseIcon
           slot="icon"
           class="ml-8 mr-4 text-blue"

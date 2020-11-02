@@ -8,7 +8,26 @@ const routes = [
   {
     path: '/',
     name: 'Index',
-    component: Index
+    component: Index,
+    redirect: '/create',
+    children: [
+      {
+        path: "/create",
+        name: "Create",
+        component: () =>
+          import(
+            /* webpackChunkName: "Create" */ "../views/registration/Create.vue"
+          ),
+      },
+      {
+        path: "/welcome",
+        name: "Welcome",
+        component: () =>
+          import(
+            /* webpackChunkName: "Welcome" */ "../views/registration/Welcome.vue"
+          ),
+      },
+    ]
   },
   {
     path: '/dashboard',
